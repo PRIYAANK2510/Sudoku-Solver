@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+}
+body{
+    height: 100vh;
+    background-color: rgb(173, 158, 184);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.nav{
+    background-color: rgb(96, 65, 119);
+    padding: 0.5rem 1rem;
+    color: hsl(275, 15%, 67%);
+}
+.game{
+    flex: 1;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+}
+#sudoku-board{
+    margin: 2rem 0 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    width: clamp(360px,100%,900px);
+    
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+#sudoku-board input{
+    width: clamp(40px,100%,100px);
+    outline: none;
+    border: 1px solid hsl(275, 1%, 23%);
+    aspect-ratio: 1/1;
+    font-family: inherit;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+}
+input{
+    background-color: hsl(275, 32%, 86%);
+    font-weight: 700;
+    color: rgb(179, 22, 22);
+}
+.odd-section{
+    background-color: hsl(275, 11%, 77%);
+}
+input:nth-child(1){
+    border-top-left-radius: 0.5rem;
+}
+input:nth-child(9){
+    border-top-right-radius: 0.5rem;
+}
+input:nth-child(73){
+    border-bottom-left-radius: 0.5rem;
+}
+input:nth-child(81){
+    border-bottom-right-radius: 0.5rem;
+}
+.game button{
+    padding: 1rem;
+    border: 1px solid hsl(275, 1%, 23%);
+    border-radius: 0.5rem;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: rgb(96, 65, 119);
+    color: hsl(275, 16%, 82%);
+    transition: opacity 300ms ease-in-out;
+}
+.game button:hover{
+    opacity: 0.85;
+    cursor: pointer;
+}
+.empty-el{
+    color: rgb(0, 143, 0);
+}
